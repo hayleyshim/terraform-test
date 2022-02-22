@@ -11,3 +11,24 @@ resource "google_compute_firewall" "firewall_rule" {
   source_ranges = var.source_ranges
   target_tags = var.target_tags
 }
+
+###########################################
+#                                         #
+#         Webserver RESOURCES 추가         # 
+#                                         #
+###########################################
+
+resource "google_compute_firewall" "this" {
+  name          = var.name
+  network       = var.network
+  source_ranges = var.source-ranges
+
+  allow {
+    protocol = var.ip_protocol
+    ports    = [var.backend-port]
+  }
+  log_config {
+    metadata = "INCLUDE_ALL_METADATA"
+  }
+
+}
