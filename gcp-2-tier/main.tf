@@ -133,6 +133,19 @@ module "private_instance3" {
   metadata_Name_value = "private_vm"
 }
 
+# create the vm in public subnet - 추가(vm-db)
+module "private_vm_db" {
+  source = "./modules/vm"
+
+  instance_name = "private-vm3"
+  machine_type = "f1-micro"
+  vm_zone = "us-west2-a"
+  network_tags = ["private-vm", "test"]
+  machine_image = "ubuntu-1804-bionic-v20200317"
+  subnetwork = module.private_subnet2.sub_network_name
+  metadata_Name_value = "private_vm"
+}
+
 # create firewall rule with ssh access to the public instance/s
 module "firewall_rule_public_ssh_all" {
   source = "./modules/firewall_rules"
@@ -169,7 +182,7 @@ module "firewall_rule_private_vm" {
   ports_types = null
   source_tags = ["public-vm"]
   source_ranges = null
-  target_tags = ["private-vm","private-vm2","private-vm3"]
+  target_tags = ["private-vm","private-vm2","private-vm3","private_vm_db"]
 }
 
 
