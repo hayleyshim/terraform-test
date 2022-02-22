@@ -2,12 +2,6 @@ variable "subnetwork_name" {
   type = string
 }
 
-#추가 subnet
-variable "subnetwork_name2" {
-  type = string
-}
-
-
 variable "cidr" {
   type = string
 }

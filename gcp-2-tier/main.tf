@@ -68,7 +68,7 @@ module "private_subnet" {
 }
 
 # creating the private subnet - 추가(db) 
-module "private_subnet" {
+module "private_subnet2" {
   source = "./modules/subnetworks"
 
   subnetwork_name = "private-subnetwork2"
@@ -108,7 +108,7 @@ module "private_instance" {
 
 
 # create the vm in public subnet - 추가(vm)
-module "private_instance" {
+module "private_instance2" {
   source = "./modules/vm"
 
   instance_name = "private-vm2"
@@ -121,7 +121,7 @@ module "private_instance" {
 }
 
 # create the vm in public subnet - 추가(vm)
-module "private_instance" {
+module "private_instance3" {
   source = "./modules/vm"
 
   instance_name = "private-vm3"
