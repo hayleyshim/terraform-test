@@ -137,7 +137,7 @@ module "private_instance3" {
 module "private_vm_db" {
   source = "./modules/vm"
 
-  instance_name = "private-vm3"
+  instance_name = "private_vm_db"
   machine_type = "f1-micro"
   vm_zone = "us-west2-a"
   network_tags = ["private-vm", "test"]
