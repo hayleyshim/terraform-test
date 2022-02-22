@@ -137,7 +137,7 @@ module "private_instance3" {
 module "private_vm_db" {
   source = "./modules/vm"
 
-  instance_name = "private_vm_db"
+  instance_name = "private-vm-db"
   machine_type = "f1-micro"
   vm_zone = "us-west2-a"
   network_tags = ["private-vm", "test"]
@@ -182,7 +182,7 @@ module "firewall_rule_private_vm" {
   ports_types = null
   source_tags = ["public-vm"]
   source_ranges = null
-  target_tags = ["private-vm","private-vm2","private-vm3","private_vm_db"]
+  target_tags = ["private-vm","private-vm2","private-vm3","private-vm-db"]
 }
 
 
