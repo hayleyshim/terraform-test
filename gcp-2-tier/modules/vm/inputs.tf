@@ -4,6 +4,7 @@ variable "instance_name" {
 
 variable "machine_type" {
     type = string
+    default = "f1-micro" # webserver 추가 
 }
 
 variable "vm_zone" {
@@ -12,6 +13,13 @@ variable "vm_zone" {
 
 variable "machine_image" {
     type = string
+    default = "debian-cloud/debian-9" #webserver 추가
+}
+
+# webserver 추가 
+variable "vm-startup-script" {
+  type    = string
+  default = "apt update && apt -y install apache2 && echo '<html><body><p>Linux startup script added directly.</p></body></html>' > /var/www/html/index.html"
 }
 
 variable "subnetwork" {
@@ -33,29 +41,21 @@ variable "metadata_Name_value" {
 #                                         #
 ###########################################
 
-variable "name" {
-  type = string
+
+#variable "backend-port" {
+#  type = number
+#}
+
+#variable "frontend-port" {
+#  type = number
+#}
+
+variable "source-ranges" {
+  type    = list(string)
+  default = ["35.191.0.0/16", "130.211.0.0/22"]
 }
 
-variable "vm-type" {
+variable "ip_protocol" {
   type    = string
-  default = "f1-micro"
-}
-
-variable "vm-startup-script" {
-  type    = string
-  default = "apt update && apt -y install apache2 && echo '<html><body><p>Linux startup script added directly.</p></body></html>' > /var/www/html/index.html"
-}
-
-variable "frontend-port" {
-  type = number
-}
-
-variable "backend-port" {
-  type = number
-}
-
-variable "vm-image" {
-  type    = string
-  default = "debian-cloud/debian-9"
+  default = "tcp"
 }
