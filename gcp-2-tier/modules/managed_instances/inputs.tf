@@ -15,7 +15,7 @@ variable "prefix" {
     description = "The prefix for all of the objects being created"
 }*/
 
-variable "compute_image" {
+variable "machine_image" {
     description = "The name of the image to use for creating compute instances within the instance group"
 }
 

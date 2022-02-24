@@ -9,7 +9,7 @@ resource "google_compute_instance_template" "application-template" {
   }
 
   network_interface {
-    network="default"
+    subnetwork = var.subnetwork
 
     access_config {
       // Ephemeral IP

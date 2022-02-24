@@ -24,6 +24,7 @@ resource "google_compute_instance" "virtual-machine" {
   }
 }  
 
+/*
 #health check 추가
 resource "google_compute_health_check" "application-healthcheck" {
   name                = "${var.instance_name}-health-check"
@@ -37,3 +38,4 @@ resource "google_compute_health_check" "application-healthcheck" {
     port         = "80"
   }
 }
+*/
