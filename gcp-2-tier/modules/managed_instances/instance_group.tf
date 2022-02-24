@@ -36,7 +36,7 @@ resource "google_compute_health_check" "application-healthcheck" {
 }
 
 resource "google_compute_instance_group_manager" "application-igm" {
-  name               = "${var.prefix}-instance-group-manager"
+  name               = "${var.instance_name}-instance-group-manager"
   instance_template  = "${google_compute_instance_template.application-template.self_link}"
   base_instance_name = "${var.instance_name}"
   zone               = "${var.vm_zone}"
