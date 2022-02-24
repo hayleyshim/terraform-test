@@ -34,28 +34,3 @@ variable "metadata_Name_value" {
     type = string
 }
 
-
-###########################################
-#                                         #
-#                webserver 추가            # 
-#                                         #
-###########################################
-
-
-#variable "backend-port" {
-#  type = number
-#}
-
-#variable "frontend-port" {
-#  type = number
-#}
-
-variable "source-ranges" {
-  type    = list(string)
-  default = ["35.191.0.0/16", "130.211.0.0/22"]
-}
-
-variable "ip_protocol" {
-  type    = string
-  default = "tcp"
-}

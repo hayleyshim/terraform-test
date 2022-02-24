@@ -25,19 +25,3 @@ variable "source_ranges" {
 variable "target_tags" {
     type = list
 }
-
-###########################################
-#                                         #
-#         Webserver RESOURCES 추가         # 
-#                                         #
-###########################################
-
-
-variable "ip_protocol" {
-  type    = string
-  default = "tcp"
-}
-
-variable "backend-port" {
-  type = number
-}

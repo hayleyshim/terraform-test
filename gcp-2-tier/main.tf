@@ -15,22 +15,6 @@ provider "google" {
 
 ###########################################
 #                                         #
-#                BACKEND                  # 
-#                                         #
-###########################################
-
-# Configure the backend (since variables are not allowed for backend configuration, setting the credentials 
-# through the gitlab cicd variables)
-//terraform {
-//  backend "gcs" {
-//    bucket = "tf_backend_gcp_banuka_jana_jayarathna_k8s"
-//    prefix = "terraform/gcp/boilerplate"
-//  }
-//}
-
-
-###########################################
-#                                         #
 #                RESOURCES                # 
 #                                         #
 ###########################################
@@ -186,5 +170,19 @@ module "firewall_rule_private_vm" {
 }
 
 
+###########################################
+#                                         #
+#                BACKEND                  # 
+#                                         #
+###########################################
+
+# Configure the backend (since variables are not allowed for backend configuration, setting the credentials 
+# through the gitlab cicd variables)
+//terraform {
+//  backend "gcs" {
+//    bucket = "tf_backend_gcp_banuka_jana_jayarathna_k8s"
+//    prefix = "terraform/gcp/boilerplate"
+//  }
+//}
 
 
