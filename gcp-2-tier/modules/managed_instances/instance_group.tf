@@ -1,6 +1,6 @@
 
 resource "google_compute_instance_template" "application-template" {
-  name_prefix="${var.prefix}-template"
+  name_prefix="${var.instance_name}-template"
   machine_type="f1-micro"
   region="${var.region}"
 
@@ -23,7 +23,7 @@ resource "google_compute_instance_template" "application-template" {
 }
 
 resource "google_compute_health_check" "application-healthcheck" {
-  name                = "${var.prefix}-health-check"
+  name                = "${var.instance_name}-health-check"
   check_interval_sec  = 5
   timeout_sec         = 5
   healthy_threshold   = 2

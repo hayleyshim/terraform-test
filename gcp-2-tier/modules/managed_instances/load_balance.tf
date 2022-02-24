@@ -1,5 +1,5 @@
 resource "google_compute_backend_service" "application-be" {
-  name        = "${var.prefix}-backend"
+  name        = "${var.instance_name}-backend"
   port_name   = "http"
   protocol    = "HTTP"
   timeout_sec = 10
@@ -13,20 +13,20 @@ resource "google_compute_backend_service" "application-be" {
 }
 
 resource "google_compute_http_health_check" "application-http-healthcheck" {
-  name               = "${var.prefix}-http-healthcheck"
+  name               = "${var.instance_name}-http-healthcheck"
   request_path       = "/"
   check_interval_sec = 1
   timeout_sec        = 1
 }
 
 resource "google_compute_target_http_proxy" "application-proxy" {
-  name        = "${var.prefix}-proxy"
+  name        = "${var.instance_name}-proxy"
   description = "a description"
   url_map     = "${google_compute_url_map.application-url-map.self_link}"
 }
 
 resource "google_compute_url_map" "application-url-map" {
-  name        = "${var.prefix}-url-map"
+  name        = "${var.instance_name}-url-map"
   description = "a description"
 
   default_service = "${google_compute_backend_service.application-be.self_link}"
@@ -49,7 +49,7 @@ resource "google_compute_url_map" "application-url-map" {
 }
 
 resource "google_compute_global_forwarding_rule" "application-forwarding-rule" {
-  name       = "${var.prefix}-fwd-rule"
+  name       = "${var.instance_name}-fwd-rule"
   target     = "${google_compute_target_http_proxy.application-proxy.self_link}"
   port_range = "80"
 }
