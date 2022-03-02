@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-02T02:26:45.969Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62" etag="yjxMvKLWWeGOfVS3n6Up" version="16.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-02T02:27:06.100Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62" etag="Y0YXIMNWYu6PH_I4DYAI" version="16.6.4" type="github">
   <diagram id="pWYNXqBe8x7Hirdf-r9Q" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,16 +16,6 @@
         </mxCell>
         <mxCell id="X19Q8VQpx3kqBuvHNOcR-37" value="Project ID : vm-test" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];rounded=1;absoluteArcSize=1;arcSize=2;html=1;strokeColor=none;gradientColor=none;shadow=0;dashed=0;fontSize=12;fontColor=#9E9E9E;align=left;verticalAlign=top;spacing=10;spacingTop=-4;fillColor=#F6F6F6;" parent="X19Q8VQpx3kqBuvHNOcR-4" vertex="1">
           <mxGeometry x="20" y="40" width="680" height="540" as="geometry" />
-        </mxCell>
-        <mxCell id="X19Q8VQpx3kqBuvHNOcR-38" value="Logical Grouping of Services / Instances" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];rounded=1;absoluteArcSize=1;arcSize=2;html=1;strokeColor=none;gradientColor=none;shadow=0;dashed=0;fontSize=12;fontColor=#9E9E9E;align=left;verticalAlign=top;spacing=10;spacingTop=-4;fillColor=#E3F2FD;" parent="X19Q8VQpx3kqBuvHNOcR-37" vertex="1">
-          <mxGeometry width="250" height="180" relative="1" as="geometry">
-            <mxPoint x="750" y="120" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="X19Q8VQpx3kqBuvHNOcR-39" value="Zone" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];rounded=1;absoluteArcSize=1;arcSize=2;html=1;strokeColor=none;gradientColor=none;shadow=0;dashed=0;fontSize=12;fontColor=#9E9E9E;align=left;verticalAlign=top;spacing=10;spacingTop=-4;fillColor=#FFF3E0;" parent="X19Q8VQpx3kqBuvHNOcR-38" vertex="1">
-          <mxGeometry width="230" height="120" relative="1" as="geometry">
-            <mxPoint x="10" y="50" as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="X19Q8VQpx3kqBuvHNOcR-103" value="Region : europe-west1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];rounded=1;absoluteArcSize=1;arcSize=2;html=1;strokeColor=none;gradientColor=none;shadow=0;dashed=0;fontSize=12;fontColor=#9E9E9E;align=left;verticalAlign=top;spacing=10;spacingTop=-4;fillColor=#ECEFF1;" parent="X19Q8VQpx3kqBuvHNOcR-37" vertex="1">
           <mxGeometry width="660" height="490" relative="1" as="geometry">
